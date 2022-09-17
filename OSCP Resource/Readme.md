@@ -5,6 +5,9 @@ https://www.revshells.com/
 
 https://github.com/ferreirasc/oscp/tree/master/payloads
 
+## One liner reverse shells
+
+https://arno0x0x.wordpress.com/2017/11/20/windows-oneliners-to-download-remote-payload-and-execute-arbitrary-code/
 
 ## Windows Privesc Additional Resources
 
