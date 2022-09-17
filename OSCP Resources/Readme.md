@@ -39,6 +39,14 @@ https://github.com/SecWiki/windows-kernel-exploits
 
 https://github.com/SecWiki/linux-kernel-exploits
 
+## mimikatz
+
+https://github.com/gentilkiwi/mimikatz/wiki/module-~-sekurlsa
+
+https://github.com/gentilkiwi/mimikatz/wiki/module-~-lsadump
+
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md#open-shares
+
 ## Powershell Usefull Cradles to Download File
 
 ```
