@@ -1,4 +1,5 @@
 **EXP-401 OSEE Review & Preparation**
+
 A lot of students asked me about the training and how did i prepare for it. so here we are.
 
 I attended the live training in QA London and pass the exam on my first attempt in May 2023.
@@ -6,6 +7,7 @@ I attended the live training in QA London and pass the exam on my first attempt 
 The live training itself was fun, I enjoyed it and it was full of knowledge and magic lol.
 
 ***Pre Live Training***
+
 What i did to prepare for the live training and be comfortable about it a little bit is the following.
 
 Read these 2 articles Part 1 & 2 so you can be familiar a bit with the concepts and the techniques used nowadays before the live training:
@@ -65,6 +67,7 @@ Kernel shellcodes part 1 & 2: https://improsec.com/tech-blog/windows-kernel-shel
 And of course the instructors as well at the end of the training will share some links for more research and exploits to make from just a POC. (It is a good practice and specially if you dont have much experience about it)
 
 ***The Exam**
+
 You know I can't talk a lot about the Exam.
 
 The OSEE exam contains two assignments and points will be rewarded for partial or full complition of the given assignments.
