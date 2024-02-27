@@ -28,6 +28,15 @@ you don't have to understand every single bit and structure out there.
 
 Just understand how the allocations and free works, how the heap allocate stuff and how does it free them, what does it look for before allocating and freeing? how to trigger lfh (low fragmentation heap)? these kind of stuff.
 
+How Kernel shellcodes works part 1 & 2: 
+https://improsec.com/tech-blog/windows-kernel-shellcode-on-windows-10-part-1
+
+https://improsec.com/tech-blog/windows-kernel-shellcode-on-windows-10-part-2
+
+And at last, I recommand you Write your own usermode 64-bit shellcode (assembly) to get familiar and comfortable with assembly.
+
+if you already took OSED cert, you already know how to write a 32-bit shellcode from scratch, you can start there and port it to a 64-bit shellcode. (that's what i did)
+
 ***Live training***
 
 The pace in the training was pretty fast, my approach was i focused more on understanding the concepts taugh in the classroom specially the one i wasn't familiar with, instead of trying to finish every single exercise in the classroom.
@@ -61,8 +70,6 @@ Read the Windows 10 Segment Heap Internals: https://www.youtube.com/watch?v=hetZ
 https://www.blackhat.com/docs/us-16/materials/us-16-Yason-Windows-10-Segment-Heap-Internals-wp.pdf
 
 Read Some Kernel Exploits Case Studies and how it was exploited: https://h0mbre.github.io/ (Read All HEVD Exploits, understand how they works and how they was exploited => even if they are old its about understanding how the vulnerability works)
-
-Kernel shellcodes part 1 & 2: https://improsec.com/tech-blog/windows-kernel-shellcode-on-windows-10-part-1
 
 And of course the instructors as well at the end of the training will share some links for more research and exploits to make from just a POC. (It is a good practice and specially if you dont have much experience about it)
 
