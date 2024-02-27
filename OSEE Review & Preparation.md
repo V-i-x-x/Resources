@@ -73,7 +73,7 @@ Read Some Kernel Exploits Case Studies and how it was exploited: https://h0mbre.
 
 And of course the instructors as well at the end of the training will share some links for more research for you to do and exploits to make from just a POC. (It is a good practice and specially if you dont have much experience about it).
 
-***The Exam**
+***The Exam***
 
 You know I can't talk a lot about the Exam xD.
 
