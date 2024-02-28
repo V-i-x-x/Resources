@@ -33,7 +33,7 @@ https://improsec.com/tech-blog/windows-kernel-shellcode-on-windows-10-part-1
 
 https://improsec.com/tech-blog/windows-kernel-shellcode-on-windows-10-part-2
 
-And at last, I recommand you Write your own usermode 64-bit shellcode (assembly) to get familiar and comfortable with assembly.
+And at last, I recommend you Write your own usermode 64-bit shellcode (assembly) to get familiar and comfortable with assembly.
 
 if you already took EXP-301 Course, you already know how to write a 32-bit shellcode from scratch, you can start there and port it to a 64-bit shellcode. (that's what I did)
 
@@ -89,7 +89,7 @@ The Exam was tought and hard honestly but fair.
 
 In the live training and in the book, there is a big amount of reverse engineering happening, but the exam needs to be finished in 3 days, so the amount of reversing you need to do in the exam is not as big as in the materials.
 
-So the reversing that you need to is fair for the amount of time you have.
+So the reversing that you need to do is fair for the amount of time you have.
 
 During the exam, It took me 1 day to finish the first assignment fully (50 points).
 
