@@ -209,3 +209,7 @@ namespace AddUsers
 "@
 Add-Type -outputtype consoleapplication -outputassembly backdoor.exe -TypeDefinition $code -Language CSharp
 ```
+
+## Extra Mile for AV Bypass (Not required for the OSCP Exam)
+
+[AMSI Write Raid](https://github.com/V-i-x-x/AMSI-BYPASS)
